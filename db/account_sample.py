@@ -10,23 +10,36 @@ acc_dic = {
     'password': 'abc',
     'credit': 15000,
     'balance': 15000,
-    'enroll_date':'2016-01-02',
-    'expire_date':'2021-01-01',
-    'status':0 # 0表示正常
+    'enroll_date': '2016-01-02',
+    'expire_date': '2021-01-01',
+    'status': 0  # 0表示正常
 
-    }
+}
 acc_dic2 = {
     'id': 2345,
     'password': 'abc',
     'credit': 15000,
     'balance': 15000,
-    'enroll_date':'2016-01-02',
-    'expire_date':'2021-01-01',
-    'status':0 # 0表示正常
+    'enroll_date': '2016-01-02',
+    'expire_date': '2021-01-01',
+    'status': 0  # 0表示正常 1 =locked 2=disabled
 
-    }
-with open(r"account\1234","w") as file:
-    json.dump(acc_dic,file)
+}
+acc_dic3 = {
+    'id': 5678,
+    'password': 'abc',
+    'credit': 15000,
+    'balance': 15000,
+    'enroll_date': '2016-01-02',
+    'expire_date': '2021-01-01',
+    'status': 0 # 0表示正常
+}
 
-with open(r"account\2345","w") as file:
-    json.dump(acc_dic2,file)
+with open(r"account\1234", "w") as file:
+    json.dump(acc_dic, file)
+
+with open(r"account\2345", "w") as file:
+    json.dump(acc_dic2, file)
+
+with open(r"account\5678", "w") as file:
+    json.dump(acc_dic3, file)

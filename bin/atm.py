@@ -5,9 +5,15 @@
 # @Software: PyCharm
 
 #  ATM执行程序
+
+from core import main
 import os
 import sys
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(base_dir)
 sys.path.append(base_dir)
+
+
+if __name__ == '__main__':
+    main.run()
