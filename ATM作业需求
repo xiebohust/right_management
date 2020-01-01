@@ -1,41 +1,28 @@
-模拟实现一个ATM+购物商场的程序
-1,额度15000或者自定义
-2,实现购物商场,买东西加入购物车,调用信用卡接口结账
-3 可以提现,手续费5%
-4 每月22号出账单,每月10号为还款日,过期未还,接欠款总额万分之5每日计息
-5支持多账户登录
-6支持账户间转账
-7记录每月日常消费流水
-8提供还款接口
-9ATM记录操作日志
-10提供管理接口,包括添加账户.用户额度.冻结账户等
-11用户认证装饰器
-json.dumps()  存储
-json.loads()  取出
-1 login----
-2 显示菜单
+业务逻辑在auth
+数据操作在repository
 
 
 
-conf--配置文件
-    --__init__.py
+table:
+user_info
+
+id,username,password,role_id
+
+create table
+
+table:
+role
+
+id,name
 
 
-core--主要程序逻辑目录
-    auth.py 用户认证模块
-    db_handler.py 数据库连接引擎
-    logger.py 日志记录模块
-    main.py 主逻辑交互程序
-    transaction.py 记账\还钱\取钱等所有的与金额操作
+table:
+permission
 
-db--用户数据存储的地方
-
-    account_sample.py 生产一个初始账户的 数据
-    accounts 存各个用户的账户数据一个用户一个字典
-
-log --- 日志目录
+id,name,func, module
 
 
+table
+role_to_perm
 
-shopping_mall ---电子商城程序,需要单独实现
-
+id,role_id, perm_id
